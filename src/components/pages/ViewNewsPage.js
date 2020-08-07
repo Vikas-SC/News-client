@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+const ViewNewsPage = () => {
   const [news, setNews] = useState({});
   useEffect(() => {
     callApi()
@@ -17,17 +15,8 @@ function App() {
       .catch(err => err)
   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-      <div>
-        {
-          news.articles && news.articles.map((n) => <p>{n.title}</p>)
-        }
-      </div>
+    <div>
+
     </div>
   );
 }
-
-export default App;
